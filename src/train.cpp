@@ -6,7 +6,7 @@ Train::Train() {
   countOp = 0;
 }
 
-~Train() {
+Train::~Train() {
   Cage* current = first;
   while (current->next != first) {
     Cage* temp = current;
@@ -15,7 +15,7 @@ Train::Train() {
   }
 }
 
-void addCage(bool light) {
+void Train::addCage(bool light) {
   Cage* cage = new Cage;
   cage->light = light;
   cage->next = nullptr;
@@ -35,7 +35,7 @@ void addCage(bool light) {
   }
 }
 
-int getLength() {
+int Train::getLength() {
   int length = 0;
   Cage* current = first;
   current->light = true;
