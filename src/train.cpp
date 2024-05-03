@@ -12,7 +12,7 @@ Train::Train() {
     Cage* temp = current;
     current = current->next;
     delete temp;
-	}
+  }
 }
 
 void addCage(bool light) {
